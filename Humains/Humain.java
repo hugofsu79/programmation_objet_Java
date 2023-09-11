@@ -1,13 +1,13 @@
-package POOJava;
+package Humains;
 
 public class Humain {
-    private String nom;
-    private String prenom;
-    private int age;
-    private int taille;
-    private int poids;
-    private int anneeDeNaissance;
-    private String pays;
+    protected String nom;
+    protected String prenom;
+    protected int age;
+    protected int taille;
+    protected int poids;
+    protected int anneeDeNaissance;
+    protected String pays;
 
     public Humain(String nom, String prenom, int age) { // attribut
         this.nom = nom; // ou nom = humainNom;

@@ -1,20 +1,20 @@
-package POOJava;
+package Humains;
 
 public class Homme extends Humain {
-    private String equipePreferee;
+    private String equipePreferee = "aucune";
 
     public Homme(String nom, String prenom, int age) {
         super(nom, prenom, age); // Appel du constructeur de la classe mère (Humain)
     }
 
-    public Homme(String nom, String prenom, String equipePreferee, int age, int taille, int poids, int anneeDeNaissance,
-            String pays) {
+    public Homme(String nom, String prenom, int age, int taille, int poids, int anneeDeNaissance,
+            String pays, String equipePreferee) {
         super(nom, prenom, age, taille, poids, anneeDeNaissance, pays);
-        this.equipePreferee = "aucune";
+        this.equipePreferee = equipePreferee;
     }
 
     // Méthode pour obtenir l'équipe préférée
-    public String EquipePreferee() {
+    public String getEquipePreferee() {
         return equipePreferee;
     }
 
@@ -23,23 +23,9 @@ public class Homme extends Humain {
         this.equipePreferee = equipePreferee;
     }
 
-    public String getNom() {
-        return nom;
-    }
+    @Override
+    public void sayHello() { //polymorphisme
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public String getEquipePreferee() {
-        return "aucune";
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void sayHello() {
         System.out.println("Bonjour, je m'appelle " + prenom + " " + nom + "je suis un homme et j'ai" + age + "ans");
     }
 }
