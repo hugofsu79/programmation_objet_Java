@@ -28,6 +28,7 @@ public class Humain {
         this.anneeDeNaissance = anneeDeNaissance;
         this.pays = pays;
     }
+    
 
     public String getNom() {
         return nom;
