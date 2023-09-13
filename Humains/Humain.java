@@ -15,7 +15,8 @@ public class Humain {
         this.age = age;
 
     }
-// abstract
+
+    // abstract
     public Humain(String nom, String prenom, int age, int taille, int poids, int anneeDeNaissance, String pays) { // attribut
                                                                                                                   // avec
                                                                                                                   // les
@@ -28,7 +29,6 @@ public class Humain {
         this.anneeDeNaissance = anneeDeNaissance;
         this.pays = pays;
     }
-    
 
     public String getNom() {
         return nom;
@@ -62,8 +62,26 @@ public class Humain {
         poids = nouveauPoids;
     }
 
+    public void setTaille(int nouvelletaille) {
+        taille = nouvelletaille;
+    }
+
+    public void setAnneeDeNaissance(int nouvelleAnneeDeNaissance) {
+        anneeDeNaissance = nouvelleAnneeDeNaissance;
+    }
+
+    public void setPays(String nouveauPays) {
+        pays = nouveauPays;
+    }
+
     public void sayHello() { // méthode sayHello
         System.out.println("Bonjour, je m'appelle " + prenom + " " + nom);
+    }
+
+    public void sayEverything() {// méthode sayEverything
+        System.out.println("Bonjour, je m'appelle " + prenom + " " + nom + ", j'ai " + age + " ans, je pèse " + poids
+                + " kg, je mesure " + taille + " cm, je suis né en " + anneeDeNaissance + " et je viens de " + pays
+                + ".");
     }
 
 }

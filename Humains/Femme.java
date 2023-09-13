@@ -13,19 +13,26 @@ public class Femme extends Humain {
         this.magazinePrefere = magazinePrefere;
     }
 
-    // Méthode pour obtenir l'équipe préférée
+    // Méthode pour obtenir le magazine préféré
     public String getmagazinePrefere() {
         return magazinePrefere;
     }
 
-    // Méthode pour définir l'équipe préférée
+    // Méthode pour définir le magazine préféré
     public void setmagazinePrefere(String magazinePrefere) {
         this.magazinePrefere = magazinePrefere;
     }
 
     @Override
-    public void sayHello() { //polymorphisme
+    public void sayHello() { // polymorphisme
 
-        System.out.println("Bonjour, je m'appelle " + prenom + " " + nom + "je suis une femme et j'ai" + age + "ans");
+        System.out
+                .println("Bonjour, je m'appelle " + prenom + " " + nom + ", je suis une femme et j'ai " + age + "ans");
+    }
+
+    @Override
+    public void sayEverything() {
+        super.sayEverything();
+        System.out.println("Mon magazine préféré est " + magazinePrefere);
     }
 }

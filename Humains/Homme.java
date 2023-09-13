@@ -24,8 +24,14 @@ public class Homme extends Humain {
     }
 
     @Override
-    public void sayHello() { //polymorphisme
+    public void sayHello() { // polymorphisme
 
-        System.out.println("Bonjour, je m'appelle " + prenom + " " + nom + "je suis un homme et j'ai" + age + "ans");
+        System.out.println("Bonjour, je m'appelle " + prenom + " " + nom + ", je suis un homme et j'ai " + age + "ans");
+    }
+
+    @Override
+    public void sayEverything() {
+        super.sayEverything();
+        System.out.println("Mon équipe préférée est " + equipePreferee);
     }
 }
